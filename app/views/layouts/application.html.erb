@@ -9,6 +9,22 @@
   </head>
 
   <body class="<%= controller.controller_name %>">
-    <%= yield %>
+  	<div class="banner">
+  	  <%= image_tag 'logo.svg', alt: 'The Pragmatic Book-shelf' %>
+  	  <span class="title"><%= @page_title %></span>
+  	</div>
+  	<div class="columns">
+  	  <div class="side">
+  		<ul>
+  		  <li><a href="">Home</a></li>
+			<li><a href="">Questions</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	  </div>
+  	</div>
+  	<div class="main">
+      <%= yield %>
+  	</div>
   </body>
 </html>
